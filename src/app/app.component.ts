@@ -1,5 +1,14 @@
 import { Component, ViewChild, ElementRef, OnInit, AfterViewInit, AfterContentInit, AfterViewChecked, AfterContentChecked } from '@angular/core';
-
+import {
+  Compiler,
+  ComponentFactory,
+  ComponentFactoryResolver,
+  ComponentRef,
+  Input,
+  ModuleWithComponentFactories,
+  NgModule,
+  ViewContainerRef
+} from '@angular/core';
 declare var $: any;
 
 @Component({
@@ -7,7 +16,9 @@ declare var $: any;
   templateUrl: "./app.component.html",
 })
 export class AppComponent implements AfterViewInit {
-  
+
+  public diagModel: any;
+
   // data = {
   //   operators: {
   //     operator1: {
@@ -138,6 +149,25 @@ export class AppComponent implements AfterViewInit {
 
     this.operatorI++;
     $(this.exampleDiv.nativeElement).flowchart('createOperator', operatorId, operatorData);
+  }
+
+
+
+  deleteOperationOrLink() {
+    $(this.exampleDiv.nativeElement).flowchart('deleteSelected');
+  }
+
+  load() {
+    $(this.exampleDiv.nativeElement).flowchart('deleteSelected');
+    var data = JSON.parse(this.diagModel);
+    $(this.exampleDiv.nativeElement).flowchart('setData', data);
+  }
+
+
+  get() {
+    $(this.exampleDiv.nativeElement).flowchart('deleteSelected');
+    var data = $(this.exampleDiv.nativeElement).flowchart('getData');
+    this.diagModel = JSON.stringify(data, null, 2);
   }
 
 }

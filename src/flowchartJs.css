@@ -204,7 +204,8 @@ body {
 }
 
 .flowchart-operator.selected {
-    border-color: #555;
+    /* border-color: #555; */
+    border: 5px solid black;
 }
 
 
@@ -240,9 +241,9 @@ body {
 }
 
 
-.flowchart-link > path{
+/* .flowchart-link > path{
     stroke: #2aa58f;
-}
+} */
 
 
 
