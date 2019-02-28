@@ -215,12 +215,16 @@ body {
     font-weight: bold;
     box-sizing: border-box;
     border-bottom: 1px solid #DDDDDD;
-    background: #F0F0F0;
+    /* background: #F0F0F0; */
     height: auto;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     cursor: move;
+    
+
+    /* background-color: #2aa58f;
+    color: white; */
 }
 
 .flowchart-operator .flowchart-operator-inputs-outputs {
@@ -236,19 +240,22 @@ body {
 }
 
 
+.flowchart-link > path{
+    stroke: #2aa58f;
+}
 
 
 
 
+.myTest{
+    background-color: #2a7ea5;
+    color: white;
+}
 
-
-
-
-
-
-
-
-
+.myTest2{
+    background-color: #4c0f8d;;
+    color: white;
+}
 
 
 
