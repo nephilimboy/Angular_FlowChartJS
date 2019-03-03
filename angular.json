@@ -21,13 +21,15 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "src/styles.css",
-              "src/flowchartJs.css"
+              "src/flowchartJs.css",
+              "src/styles.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "./jquery-ui.min.js",
-              "node_modules/jquery.flowchart/jquery.flowchart.min.js"
+              "js/jquery.min.js",
+             "js/jquery-ui.min.js",
+             "js/jquery.panzoom.min.js",
+             "js/jquery.mousewheel.min.js",
+             "js/jquery.flowchart.min.js"
             ]
           },
           "configurations": {
